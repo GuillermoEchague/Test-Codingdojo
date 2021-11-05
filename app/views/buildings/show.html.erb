@@ -1,0 +1,25 @@
+<h1>Buildings#show</h1>
+<p>Find me in app/views/buildings/show.html.erb</p>
+
+
+<br>
+<h1>Información del Edificio</h1>
+
+<h2>Nombre de Edificio</h2>
+<h3><%= @building.nombre_edificio %></h3>
+
+<h2>Nombre de Direccion</h2>
+<h3><%= @building.direccion %></h3>
+
+<h2>Nombre de Ciudad</h2>
+<h3><%= @building.ciudad %></h3>
+
+
+<h2>Numero de Departamentos</h2>
+
+<% @apartment.each do |ap|%>
+<p><%= ap.numero_depto %></p>
+<% end %>
+
+ <br>   
+<button><a href="/buildings">Volver</a></button>

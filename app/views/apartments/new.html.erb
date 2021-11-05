@@ -1,0 +1,18 @@
+<h1>Apartments#new</h1>
+<p>Find me in app/views/apartments/new.html.erb</p>
+
+<br>
+<h1>Ingresar un nuevo departmento</h1>
+ 
+<%= form_for(@apartment, :url => apartments_path, :method => "post") do |f| %>
+    <%= f.label :numero_depto %>
+    <%= f.text_field :numero_depto %>
+    <br>
+    <br>
+    <%= f.label :building_id %>
+    <%= f.select :building_id, @buildings.map { |b| [b.nombre_edificio, b.id] }, prompt: "Selecciona un edificio" %>
+    <br>
+    <br>
+    <button><%= f.submit "Crear Departamento" %></button>
+    <button><%= link_to "Volver", :back %></button>
+<% end %>
